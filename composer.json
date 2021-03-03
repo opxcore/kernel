@@ -1,0 +1,36 @@
+{
+  "name": "opxcore/kernel",
+  "description": "The OpxCore kernel.",
+  "keywords": [
+    "opxcore",
+    "kernel"
+  ],
+  "license": "MIT",
+  "type": "library",
+  "homepage": "https://opxcore.com",
+  "support": {
+    "issues": "https://github.com/opxcore/kernel/issues",
+    "source": "https://github.com/opxcore/kernel"
+  },
+  "authors": [
+    {
+      "name": "Lozovoy Vyacheslav",
+      "email": "opxcore@gmail.com"
+    }
+  ],
+  "require": {
+    "php": "^7.4",
+    "opxcore/app-interface": "^1.1.1",
+    "opxcore/kernel-interface": "dev-master",
+    "opxcore/request-interface": "dev-master",
+    "opxcore/response-interface": "dev-master",
+    "opxcore/pipeline": "^1.0.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "OpxCore\\Kernel\\": "src/"
+    }
+  },
+  "prefer-stable": true,
+  "minimum-stability": "dev"
+}
