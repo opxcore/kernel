@@ -66,7 +66,9 @@ class Kernel implements KernelInterface
             ->send($request)
             ->through($this->middlewares)
             ->via('handle')
-            ->then([$this, 'processRouter'])
+            ->then(function ($request) {
+                $this->processRouter($request);
+            })
             ->run();
 
         $this->app->profiler()->stop('kernel.handle');
